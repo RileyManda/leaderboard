@@ -35,6 +35,7 @@ body {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 20px;
+  margin-left: -50px;
 }
 
 .flex-items:nth-child(1),
@@ -93,7 +94,8 @@ table tr:nth-child(odd) {
 }
 
 .score-form {
-  margin-top: -167px;
+  margin-top: -145px;
+  margin-left: 20px;
 }
 
 .form-input input {
@@ -111,6 +113,7 @@ table tr:nth-child(odd) {
   padding: 0.5em 0.7em;
   border: 2px solid var(--dark-color);
   box-shadow: 0 4px 3px 0 var(--box-shadow-color);
+  cursor: pointer;
 }
 
 .form-input,
@@ -133,6 +136,7 @@ table tr:nth-child(odd) {
   padding: 0.5em 0.7em;
   border: 2px solid var(--dark-color);
   box-shadow: 0 4px 3px 0 var(--box-shadow-color);
+  cursor: pointer;
 }
 
 .form-title {
