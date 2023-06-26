@@ -144,6 +144,18 @@ const createInputScore = () => {
   return inputScore;
 };
 
+// Create submit button
+
+// Create submit button
+const createSubmitButton = () => {
+  const submitButton = document.createElement('button');
+  submitButton.type = 'submit';
+  submitButton.textContent = 'Submit';
+  submitButton.classList.add('form-button');
+
+  return submitButton;
+};
+
 // Main function to build the DOM structure
 export const buildDOM = () => {
   const container = createContainer();
@@ -184,6 +196,7 @@ export const buildDOM = () => {
   const formInput = createFormInput();
   const inputName = createInputName();
   const inputScore = createInputScore();
+  const submitButton = createSubmitButton();
 
   formInput.appendChild(inputName);
   formInput.appendChild(document.createElement('br'));
@@ -192,6 +205,7 @@ export const buildDOM = () => {
   formInput.appendChild(document.createElement('br'));
   formInput.appendChild(document.createElement('br'));
   form.appendChild(formInput);
+  form.appendChild(submitButton);
   formTitle.appendChild(h3Form);
   scoreForm.appendChild(formTitle);
   scoreForm.appendChild(form);
@@ -202,6 +216,3 @@ export const buildDOM = () => {
   // Append the container to the document body
   document.body.appendChild(container);
 };
-
-// Call the main function to build the DOM structure
-// buildDOM();

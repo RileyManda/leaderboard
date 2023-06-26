@@ -1,4 +1,5 @@
 const path = require('path');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -19,13 +20,5 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: 'single',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
   },
 };
