@@ -1,9 +1,8 @@
-
-body,
-html {
+* {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 :root {
@@ -24,33 +23,24 @@ body {
   justify-content: center;
   align-items: flex-start;
   align-content: space-around;
-}
-
-.leaderboard-title {
-  margin-left: -50px;
+  margin-top: 30px;
 }
 
 .leaderboard-title h1 {
   font-size: 30px;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.flex-items:nth-child(1) {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: center;
-  order: 0;
-}
-
+.flex-items:nth-child(1),
 .flex-items:nth-child(2) {
-  flex-direction: column;
   display: block;
+  order: 0;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   align-self: center;
-  order: 0;
 }
 
 .score-table {
@@ -60,33 +50,45 @@ body {
 }
 
 .leaderboard {
-  flex: 1;
-  margin-right: 30px;
-  justify-content: flex-start;
+  margin-right: 20px;
+}
+
+.leaderboard,
+.score-form,
+.form-input,
+.form-container {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
+}
+
+.score-form,
+.form-button {
+  justify-content: flex-end;
 }
 
 .score-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   margin-top: -45px;
-}
-
-.form-input {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2px;
-  margin-bottom: 2px;
 }
 
 .form-input input {
   margin-bottom: -40px;
 }
 
-.form-fields {
-  margin-top: -15px;
+.refresh-button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-input,
+.recent-scores {
+  margin-bottom: 10px;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 30px;
+  margin-top: 20px;
 }
 
 .form-button {
@@ -95,25 +97,25 @@ body {
   margin-top: 2px;
 }
 
+.form-title {
+  margin-bottom: 12px;
+}
+
+.form-title,
 .recent-scores {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.refresh-button {
-  margin-left: 10px;
+.form-title h3,
+.recent-scores h3 {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.form-container {
-  flex: 1;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
-.form-title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  margin-top: 9px;
+.leaderboard-title,
+.form-title h3,
+.recent-scores h3,
+.score-table {
+  font-weight: bold;
 }
