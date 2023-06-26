@@ -9,14 +9,15 @@
 
 <body>
     <main>
-   
-<section class="score-table container">
-    <div class="title">
+        <section class="container">
+            <div class="flex-items">
+<div class="leaderboard">
+    <div class="leaderboard-title">
         <h1>Leaderboard!</h1>
     </div>
     <div class="recent-scores">
-        <p>Recent scores</p>
-        <button>Refresh</button>
+        <h3>Recent scores</h3>
+        <button class="refresh-button">Refresh</button>
     </div>
     <div class="score-table">
         <table>
@@ -43,19 +44,31 @@
             </tr>
         </table>
     </div>
+</div>
+            </div>
 
-    <div class="score-form">
-        <h2 class="add-score-title">Add your score</h2>
-        <form action="post" method="submit">
-            <input type="text" placeholder="Your name"><br><br>
-            <input type="text" placeholder="Your score"><br><br>
-            <button>Submit</button>
-        </form>
-    </div>
-</section>
+            <div class="flex-items">
+                <div class="form-container">
+                    <div class="form-title">
+                        <h3>Add your score</h3>
+                    </div>
+                    <div class="score-form">
+                        <form action="post" method="submit">
+                            <input type="text" placeholder="Your name"><br><br>
+                            <input type="text" placeholder="Your score"><br><br>
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+           
 
+          
+        </section>
     </main>
-  
 </body>
+
+
 
 </html>

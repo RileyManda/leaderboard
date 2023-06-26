@@ -1,0 +1,98 @@
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+:root {
+  --font-color: #333;
+}
+
+/* Typography */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--font-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-around;
+}
+
+.leaderboard-title {
+  margin-left: -50px;
+}
+
+.leaderboard-title h1 {
+  font-size: 30px;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
+}
+
+.score-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.leaderboard {
+  flex: 1;
+  margin-right: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.score-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 75px;
+}
+
+.recent-scores {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.refresh-button {
+  margin-left: 20px;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.form-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: -65px;
+}
