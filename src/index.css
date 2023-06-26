@@ -1,5 +1,19 @@
 /* empty css file */
-
-body {
+body,
+html {
+  margin: 0;
+  padding: 0;
   background-color: #fff;
+}
+
+:root {
+  --font-color: #333;
+}
+
+/* Typography */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--font-color);
 }
