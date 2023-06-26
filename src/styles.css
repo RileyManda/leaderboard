@@ -16,7 +16,6 @@
 
 /* Typography */
 body {
-  font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--font-color);
@@ -33,7 +32,7 @@ body {
 
 .leaderboard-title h1 {
   font-size: 30px;
-  font-size: 2rem;
+  font-size: 40px;
   font-weight: 500;
   margin-bottom: 20px;
   margin-left: -50px;
@@ -138,7 +137,7 @@ table tr:nth-child(even) {
   margin-right: 30px;
   width: 60vw;
   max-width: 500px;
-  margin-top: -29%;
+  margin-top: -34%;
 }
 
 .form-button {
@@ -167,7 +166,7 @@ table tr:nth-child(even) {
 
 .form-title h3,
 .recent-scores h3 {
-  font-size: 1rem;
+  font-size: 28px;
   font-weight: 500;
 }
 
