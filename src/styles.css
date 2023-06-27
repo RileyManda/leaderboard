@@ -21,6 +21,7 @@ body {
   color: var(--font-color);
 }
 
+/* main section container */
 .container {
   display: flex;
   flex-direction: row;
@@ -29,6 +30,7 @@ body {
   align-content: space-around;
   margin-top: 30px;
   margin-left: 20%;
+  height: 80vh;
 }
 
 .leaderboard-title h1 {
@@ -39,8 +41,17 @@ body {
   margin-left: -50px;
 }
 
-.flex-items:nth-child(1),
-.flex-items:nth-child(2) {
+.flex-item-left {
+  flex: 1;
+}
+
+.flex-item-right {
+  flex: 1;
+  margin-top: 15%;
+}
+
+.flex-item-left:nth-child(1),
+.flex-item-right:nth-child(2) {
   display: flex;
   order: 0;
   flex-grow: 0;
@@ -48,6 +59,8 @@ body {
   flex-basis: auto;
   align-self: center;
 }
+
+/* score table */
 
 .score-table {
   display: flex;
