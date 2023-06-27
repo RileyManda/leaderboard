@@ -131,10 +131,10 @@ table tr:nth-child(even) {
 /* refresh button */
 
 .refresh-button {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 145px;
   display: flex;
   justify-content: flex-end;
+  align-self: flex-end;
   margin-top: 2px;
   padding: 0.5em 0.7em;
   border: 2px solid var(--dark-color);
