@@ -31,6 +31,7 @@ export const createLeaderboardTitle = () => {
 export const createH1 = () => {
   const h1 = document.createElement('h1');
   h1.textContent = 'Leaderboard!';
+  h1.classList.add('leaderboard-title-text');
   return h1;
 };
 
@@ -163,7 +164,15 @@ export const buildDOM = () => {
   const flexItem1 = createFlexItem1();
   const leaderboard = createLeaderboard();
   const leaderboardTitle = createLeaderboardTitle();
-  const h1 = createH1();
+  const existingH1 = document.querySelector('.leaderboard-title-text');
+
+  if (existingH1) {
+    leaderboardTitle.appendChild(existingH1);
+  } else {
+    const h1 = createH1();
+    leaderboardTitle.appendChild(h1);
+  }
+
   const recentScores = createRecentScores();
   const h3 = createH3();
   const refreshButton = createRefreshButton();
@@ -177,7 +186,6 @@ export const buildDOM = () => {
   });
 
   scoreTable.appendChild(table);
-  leaderboardTitle.appendChild(h1);
   recentScores.appendChild(h3);
   recentScores.appendChild(refreshButton);
   leaderboard.appendChild(leaderboardTitle);
@@ -213,5 +221,10 @@ export const buildDOM = () => {
   container.appendChild(flexItem2);
 
   // Append the container to the document body
-  document.body.appendChild(container);
+  const existingContainer = document.getElementById('container');
+  if (existingContainer) {
+    existingContainer.replaceWith(container);
+  } else {
+    document.body.appendChild(container);
+  }
 };
