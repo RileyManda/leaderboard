@@ -44,6 +44,22 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
   margin-left: -50px;
+  text-shadow: 2px 2px 4px rgba(92, 162, 187, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    text-shadow: 2px 2px 4px rgba(57, 153, 187, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
+  }
+
+  50% {
+    text-shadow: none;
+  }
+
+  100% {
+    text-shadow: 2px 2px 4px rgba(60, 126, 150, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
+  }
 }
 
 .flex-item-left {
@@ -159,7 +175,7 @@ table tr:nth-child(even) {
   cursor: pointer;
   align-self: flex-end;
   position: absolute;
-  right: -70px;
+  right: -80px;
   bottom: -19px;
 }
 
@@ -248,7 +264,7 @@ table tr:nth-child(even) {
   margin-right: 30px;
   width: 60vw;
   max-width: 500px;
-  margin-top: -25%;
+  margin-top: -48%;
 }
 
 /* form button */
