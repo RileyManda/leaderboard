@@ -1,4 +1,4 @@
-import './styles.css';
+import './index.css';
 import { buildDOM } from './theDom.js';
 
 buildDOM();
