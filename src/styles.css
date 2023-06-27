@@ -129,22 +129,6 @@ table tr:nth-child(even) {
   cursor: pointer;
 }
 
-/* refresh button  Active */
-.refresh-button:active {
-  box-shadow: 0 2px 2px 0 var(--box-shadow-color);
-}
-
-.refresh-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: 0 1px 1px 0 var(--box-shadow-color);
-  pointer-events: none;
-}
-
 /* refresh button  END */
 
 .form-input,
@@ -175,22 +159,6 @@ table tr:nth-child(even) {
   bottom: -19px;
 }
 
-/* form button active */
-.form-button:active {
-  box-shadow: 0 2px 2px 0 var(--box-shadow-color);
-}
-
-.form-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: 0 1px 1px 0 var(--box-shadow-color);
-  pointer-events: none;
-}
-
 .form-title {
   margin-bottom: 12px;
 }
@@ -213,3 +181,24 @@ table tr:nth-child(even) {
 .score-table {
   font-weight: bold;
 }
+
+/* buttons  Active [form and refresh btn] */
+
+.refresh-button:active,
+.form-button:active {
+  box-shadow: 0 2px 2px 0 var(--box-shadow-color);
+}
+
+.refresh-button::after,
+.form-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 1px 1px 0 var(--box-shadow-color);
+  pointer-events: none;
+}
+
+/* buttons  Active [form and refresh btn] END */
