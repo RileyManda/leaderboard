@@ -10,6 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const refreshButton = document.querySelector('.refresh-button');
   refreshButton.addEventListener('click', () => {
     refreshTable();
-    console.log('btn clicked', refreshButton);
   });
 });

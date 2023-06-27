@@ -14,9 +14,6 @@ const refreshTable = () => {
       const scores = data.result;
       clearScoreTable();
       populateScoreTable(scores);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
     });
 };
 
