@@ -136,7 +136,7 @@ table tr:nth-child(even) {
 /* refresh button */
 
 .refresh-button {
-  margin-left: 115px;
+  margin-left: 130px;
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
