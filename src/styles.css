@@ -23,6 +23,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--font-color);
+  background-color: rgb(253, 253, 253);
 }
 
 /* main section container */
@@ -189,7 +190,7 @@ table tr:nth-child(even) {
   top: 0;
   left: 0;
   height: 100%;
-  width: 30px;
+  width: 25px;
   background-color: var(--refresh-icon-color);
   border-radius: 0 50% 50% 0;
   transform: scale(0, 1);
@@ -208,7 +209,7 @@ table tr:nth-child(even) {
   top: 0;
   left: 0;
   height: 100%;
-  width: 30px;
+  width: 25px;
   background-color: var(--refresh-icon-color);
   border-radius: 0 50% 50% 0;
   transform: scale(0, 1);
@@ -265,14 +266,13 @@ table tr:nth-child(even) {
 .form-title h3,
 .recent-scores h3 {
   font-size: 28px;
-  font-weight: 500;
 }
 
 .leaderboard-title,
 .form-title h3,
 .recent-scores h3,
 .score-table {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* buttons  Active [form and refresh btn] */
