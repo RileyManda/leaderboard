@@ -19,4 +19,4 @@ const populateScoreTable = () => {
     });
   });
 };
-export default populateScoreTable();
+export default populateScoreTable;

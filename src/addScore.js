@@ -1,4 +1,4 @@
-export const submitScore = () => {
+const submitScore = () => {
   const scoreForm = document.getElementById('scoreForm');
   scoreForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -22,7 +22,7 @@ export const submitScore = () => {
     };
 
     fetch(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lWMo5174rgz1dWg1Q9yt/scores',
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dumG1PB40BpIOBdmh4JI/scores',
       requestOptions,
     )
       .then((response) => response.json())
