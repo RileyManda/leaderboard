@@ -21,7 +21,7 @@ body {
   color: var(--font-color);
 }
 
-.container {
+.leaderboard-section {
   display: flex;
   flex-direction: row;
   justify-content: center;

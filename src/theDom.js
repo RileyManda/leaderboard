@@ -1,54 +1,55 @@
+import scores from './data.js';
 // Create container element
-const createContainer = () => {
+export const createContainer = () => {
   const container = document.createElement('div');
-  container.classList.add('container');
+  container.classList.add('leaderboard-section');
   return container;
 };
 
 // Create first flex item
-const createFlexItem1 = () => {
+export const createFlexItem1 = () => {
   const flexItem1 = document.createElement('div');
   flexItem1.classList.add('flex-items');
   return flexItem1;
 };
 
 // Create leaderboard element
-const createLeaderboard = () => {
+export const createLeaderboard = () => {
   const leaderboard = document.createElement('div');
   leaderboard.classList.add('leaderboard');
   return leaderboard;
 };
 
 // Create leaderboard title element
-const createLeaderboardTitle = () => {
+export const createLeaderboardTitle = () => {
   const leaderboardTitle = document.createElement('div');
   leaderboardTitle.classList.add('leaderboard-title');
   return leaderboardTitle;
 };
 
 // Create h1 element for leaderboard title
-const createH1 = () => {
+export const createH1 = () => {
   const h1 = document.createElement('h1');
   h1.textContent = 'Leaderboard!';
   return h1;
 };
 
 // Create recent scores element
-const createRecentScores = () => {
+export const createRecentScores = () => {
   const recentScores = document.createElement('div');
   recentScores.classList.add('recent-scores');
   return recentScores;
 };
 
 // Create h3 element for recent scores title
-const createH3 = () => {
+export const createH3 = () => {
   const h3 = document.createElement('h3');
   h3.textContent = 'Recent scores';
   return h3;
 };
 
 // Create refresh button element
-const createRefreshButton = () => {
+export const createRefreshButton = () => {
   const refreshButton = document.createElement('button');
   refreshButton.classList.add('refresh-button');
   refreshButton.textContent = 'Refresh';
@@ -69,7 +70,7 @@ export const createTable = () => {
 };
 
 // Create table row and cell
-const createScoreRow = (score) => {
+export const createScoreRow = (score) => {
   const tr = document.createElement('tr');
   const td = document.createElement('td');
   td.textContent = `Name: ${score}`;
@@ -78,42 +79,42 @@ const createScoreRow = (score) => {
 };
 
 // Create second flex item
-const createFlexItem2 = () => {
+export const createFlexItem2 = () => {
   const flexItem2 = document.createElement('div');
   flexItem2.classList.add('flex-items');
   return flexItem2;
 };
 
 // Create form container element
-const createFormContainer = () => {
+export const createFormContainer = () => {
   const formContainer = document.createElement('div');
   formContainer.classList.add('form-container');
   return formContainer;
 };
 
 // Create score form element
-const createScoreForm = () => {
+export const createScoreForm = () => {
   const scoreForm = document.createElement('div');
   scoreForm.classList.add('score-form');
   return scoreForm;
 };
 
 // Create form title element
-const createFormTitle = () => {
+export const createFormTitle = () => {
   const formTitle = document.createElement('div');
   formTitle.classList.add('form-title');
   return formTitle;
 };
 
 // Create h3 element for form title
-const createH3Form = () => {
+export const createH3Form = () => {
   const h3Form = document.createElement('h3');
   h3Form.textContent = 'Add your score';
   return h3Form;
 };
 
 // Create form element
-const createForm = () => {
+export const createForm = () => {
   const form = document.createElement('form');
   form.action = 'post';
   form.method = 'submit';
@@ -122,14 +123,14 @@ const createForm = () => {
 };
 
 // Create form input element
-const createFormInput = () => {
+export const createFormInput = () => {
   const formInput = document.createElement('div');
   formInput.classList.add('form-input');
   return formInput;
 };
 
 // Create input element for name
-const createInputName = () => {
+export const createInputName = () => {
   const inputName = document.createElement('input');
   inputName.type = 'text';
   inputName.placeholder = 'Your name';
@@ -137,7 +138,7 @@ const createInputName = () => {
 };
 
 // Create input element for score
-const createInputScore = () => {
+export const createInputScore = () => {
   const inputScore = document.createElement('input');
   inputScore.type = 'text';
   inputScore.placeholder = 'Your score';
@@ -147,7 +148,7 @@ const createInputScore = () => {
 // Create submit button
 
 // Create submit button
-const createSubmitButton = () => {
+export const createSubmitButton = () => {
   const submitButton = document.createElement('button');
   submitButton.type = 'submit';
   submitButton.textContent = 'Submit';
@@ -170,8 +171,6 @@ export const buildDOM = () => {
   const table = createTable();
 
   //  display data from score array
-  const scores = [100, 20, 50, 78, 125, 77, 42];
-
   scores.forEach((score) => {
     const scoreRow = createScoreRow(score);
     table.appendChild(scoreRow);
