@@ -23,7 +23,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--font-color);
-  background-color: rgb(253, 253, 253);
+  background-color: rgb(249, 249, 249);
 }
 
 /* main section container */
@@ -44,13 +44,13 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
   margin-left: -50px;
-  text-shadow: 2px 2px 4px rgba(92, 162, 187, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
-  animation: blink 1s infinite;
+  text-shadow: 2px 2px 4px rgba(187, 105, 92, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
+  animation: blink 2s infinite;
 }
 
 @keyframes blink {
   0% {
-    text-shadow: 2px 2px 4px rgba(57, 153, 187, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
+    text-shadow: 2px 2px 4px rgba(211, 82, 35, 0.5), -2px -2px 4px rgba(227, 167, 167, 0.5);
   }
 
   50% {
@@ -264,7 +264,7 @@ table tr:nth-child(even) {
   margin-right: 30px;
   width: 60vw;
   max-width: 500px;
-  margin-top: -48%;
+  margin-top: -30%;
 }
 
 /* form button */
@@ -311,3 +311,82 @@ table tr:nth-child(even) {
 }
 
 /* buttons  Active [form and refresh btn] END */
+
+/* Media Queries for Mobile */
+@media (min-width: 375px) {
+  .container {
+    margin-left: 5%;
+  }
+
+  .flex-item-right {
+    margin-top: 0;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 414px) {
+  .container {
+    margin-left: 10%;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 350px;
+  }
+}
+
+/* Media Queries for Desktop */
+@media (max-width: 767px) {
+  .container {
+    margin-left: 40%;
+    flex-direction: column;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+  }
+
+  .leaderboard-title h1 {
+    font-size: 30px;
+    margin-left: 30px;
+  }
+
+  .form-container {
+    margin-top: 30px;
+  }
+
+  .form-title h3 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .recent-scores {
+    margin-left: 9px;
+    width: 400px;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin-left: 20%;
+  }
+
+  .leaderboard-title h1 {
+    font-size: 40px;
+    margin-left: -50px;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 500px;
+  }
+}
