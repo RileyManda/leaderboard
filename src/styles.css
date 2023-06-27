@@ -90,6 +90,8 @@ body {
   border: 4px solid var(--border-color);
   padding: 2px;
   width: 400px;
+  overflow-y: auto;
+  max-height: 400px;
 }
 
 .score-table table {
