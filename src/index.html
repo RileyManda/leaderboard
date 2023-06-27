@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b22e8a03c.js" crossorigin="anonymous"></script>
     <title>Leaderboard</title>
 </head>
 
@@ -11,14 +12,14 @@
 
     <main>
         <section class="container">
-            <div class="flex-items">
+            <div class="flex-item-left">
                 <div class="leaderboard">
                     <div class="leaderboard-title">
                         <h1>Leaderboard!</h1>
                     </div>
                     <div class="recent-scores">
                         <h3>Recent scores</h3>
-                        <button class="refresh-button">Refresh</button>
+                        <button class="refresh-button button-effect" id="refreshButton" >Refresh</button>
                     </div>
                     <div class="score-table">
                         <table id="score-table"></table>
@@ -26,9 +27,8 @@
                 </div>
             </div>
 
-            <div class="flex-items">
+            <div class="flex-item-right">
                 <div class="form-container">
-
                     <div class="score-form">
                         <div class="form-title">
                             <h3>Add your score</h3>
@@ -38,7 +38,7 @@
                         <input id="userNameInput" type="text" placeholder="Your name" required>
                         <input id="scoreInput" type="number" placeholder="Your score" required>
                     </div>
-                    <button type="submit" class="form-button">
+                    <button type="submit" class="form-button button-effect">
                         Submit
                     </button>
                 </form>

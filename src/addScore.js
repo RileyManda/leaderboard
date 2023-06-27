@@ -25,7 +25,11 @@ const submitScore = () => {
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dumG1PB40BpIOBdmh4JI/scores',
       requestOptions,
     )
-      .then((response) => response.json());
+      .then((response) => response.json())
+      .then(() => {
+        userNameInput.value = '';
+        scoreInput.value = '';
+      });
   });
 };
 export default submitScore;

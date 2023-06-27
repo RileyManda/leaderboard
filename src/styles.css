@@ -12,6 +12,10 @@
   ----dark-color: #000;
   --box-shadow-color: var(--border-color);
   --white-color: #fff;
+  --text-color: #fff;
+  --dark-text-color: #2d2d2d;
+  --border-radius: #434343;
+  --refresh-icon-color: #9e3a3a;
 }
 
 /* Typography */
@@ -19,8 +23,10 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--font-color);
+  background-color: rgb(249, 249, 249);
 }
 
+/* main section container */
 .container {
   display: flex;
   flex-direction: row;
@@ -29,6 +35,7 @@ body {
   align-content: space-around;
   margin-top: 30px;
   margin-left: 20%;
+  height: 80vh;
 }
 
 .leaderboard-title h1 {
@@ -37,10 +44,35 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
   margin-left: -50px;
+  text-shadow: 2px 2px 4px rgba(187, 105, 92, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
+  animation: blink 2s infinite;
 }
 
-.flex-items:nth-child(1),
-.flex-items:nth-child(2) {
+@keyframes blink {
+  0% {
+    text-shadow: 2px 2px 4px rgba(211, 82, 35, 0.5), -2px -2px 4px rgba(227, 167, 167, 0.5);
+  }
+
+  50% {
+    text-shadow: none;
+  }
+
+  100% {
+    text-shadow: 2px 2px 4px rgba(60, 126, 150, 0.5), -2px -2px 4px rgba(178, 176, 176, 0.5);
+  }
+}
+
+.flex-item-left {
+  flex: 1;
+}
+
+.flex-item-right {
+  flex: 1;
+  margin-top: 15%;
+}
+
+.flex-item-left:nth-child(1),
+.flex-item-right:nth-child(2) {
   display: flex;
   order: 0;
   flex-grow: 0;
@@ -49,6 +81,8 @@ body {
   align-self: center;
 }
 
+/* score table */
+
 .score-table {
   display: flex;
   justify-content: left;
@@ -56,6 +90,8 @@ body {
   border: 4px solid var(--border-color);
   padding: 2px;
   width: 400px;
+  overflow-y: auto;
+  max-height: 400px;
 }
 
 .score-table table {
@@ -115,17 +151,109 @@ table tr:nth-child(even) {
   padding: 12px 12px;
 }
 
+/* refresh button */
+
 .refresh-button {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 130px;
   display: flex;
   justify-content: flex-end;
+  align-self: flex-end;
   margin-top: 2px;
   padding: 0.5em 0.7em;
   border: 2px solid var(--dark-color);
   box-shadow: 0 4px 3px 0 var(--box-shadow-color);
   cursor: pointer;
+  color: var(--dark-text-color);
+  background-color: #384973;
 }
+
+.form-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -20px;
+  padding: 0.5em 0.7em;
+  border: 2px solid var(--dark-color);
+  box-shadow: 0 4px 3px 0 var(--box-shadow-color);
+  cursor: pointer;
+  align-self: flex-end;
+  position: absolute;
+  right: -80px;
+  bottom: -19px;
+}
+
+/* button effects */
+.button-effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  text-transform: capitalize;
+  width: 100px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-top: 2px;
+  padding: 0.5em 0.7em;
+  background-color: #294078;
+}
+
+.refresh-button::before {
+  content: "\f021";
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25px;
+  background-color: var(--refresh-icon-color);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+
+.form-button::before {
+  content: "\f0c7";
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25px;
+  background-color: var(--refresh-icon-color);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+
+.form-button:hover {
+  text-indent: 0;
+}
+
+.refresh-button:hover::before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+
+.refresh-button:hover {
+  text-indent: 0;
+}
+
+.form-button:hover::before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+
+/* refresh button  END */
 
 .form-input,
 .recent-scores {
@@ -138,22 +266,10 @@ table tr:nth-child(even) {
   margin-right: 30px;
   width: 60vw;
   max-width: 500px;
-  margin-top: -34%;
+  margin-top: -30%;
 }
 
-.form-button {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 2px;
-  padding: 0.5em 0.7em;
-  border: 2px solid var(--dark-color);
-  box-shadow: 0 4px 3px 0 var(--box-shadow-color);
-  cursor: pointer;
-  align-self: flex-end;
-  position: absolute;
-  right: 305px;
-  bottom: -19px;
-}
+/* form button */
 
 .form-title {
   margin-bottom: 12px;
@@ -168,12 +284,111 @@ table tr:nth-child(even) {
 .form-title h3,
 .recent-scores h3 {
   font-size: 28px;
-  font-weight: 500;
 }
 
 .leaderboard-title,
 .form-title h3,
 .recent-scores h3,
 .score-table {
-  font-weight: bold;
+  font-weight: 400;
+}
+
+/* buttons  Active [form and refresh btn] */
+
+.refresh-button:active,
+.form-button:active {
+  box-shadow: 0 2px 2px 0 var(--box-shadow-color);
+}
+
+.refresh-button::after,
+.form-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 1px 1px 0 var(--box-shadow-color);
+  pointer-events: none;
+}
+
+/* buttons  Active [form and refresh btn] END */
+
+/* Media Queries for Mobile */
+@media (min-width: 375px) {
+  .container {
+    margin-left: 5%;
+  }
+
+  .flex-item-right {
+    margin-top: 0;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 414px) {
+  .container {
+    margin-left: 10%;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 350px;
+  }
+}
+
+/* Media Queries for Desktop */
+@media (max-width: 767px) {
+  .container {
+    margin-left: 40%;
+    flex-direction: column;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+  }
+
+  .leaderboard-title h1 {
+    font-size: 30px;
+    margin-left: 30px;
+  }
+
+  .form-container {
+    margin-top: 30px;
+  }
+
+  .form-title h3 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .recent-scores {
+    margin-left: 9px;
+    width: 400px;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin-left: 20%;
+  }
+
+  .leaderboard-title h1 {
+    font-size: 40px;
+    margin-left: -50px;
+  }
+
+  .score-table {
+    margin-right: 50%;
+    max-width: 500px;
+  }
 }
