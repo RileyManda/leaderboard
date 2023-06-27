@@ -22,9 +22,10 @@ const submitScore = () => {
     };
 
     fetch(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/5DOHI6Jz0kZNClOyq4yg/scores',
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dumG1PB40BpIOBdmh4JI/scores',
       requestOptions,
-    ).then((response) => response.json());
+    )
+      .then((response) => response.json());
   });
 };
 export default submitScore;
