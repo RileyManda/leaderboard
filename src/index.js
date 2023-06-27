@@ -1,8 +1,8 @@
 import './styles.css';
-import populateScoreTable from './scoreTable.js';
 import { submitScore } from './addScore.js';
+import populateScoreTable from './populateScoreTable.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  populateScoreTable();
   submitScore();
+  populateScoreTable();
 });

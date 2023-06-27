@@ -28,11 +28,9 @@ export const submitScore = () => {
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
-        // Handle the response here
       })
       .catch((error) => {
         console.error('Error:', error);
-        // Handle error here
       });
   });
 };
