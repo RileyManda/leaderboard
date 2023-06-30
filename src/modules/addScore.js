@@ -1,4 +1,4 @@
-import { dbApi } from '../config/dbConfig.js';
+import { endPoint } from '../config/dbConfig.js';
 
 const submitScore = () => {
   const scoreForm = document.getElementById('scoreForm');
@@ -24,7 +24,7 @@ const submitScore = () => {
     };
 
     fetch(
-      dbApi,
+      endPoint,
       requestOptions,
     )
       .then((response) => response.json())

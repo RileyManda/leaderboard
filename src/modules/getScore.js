@@ -1,7 +1,7 @@
-import { dbApi } from '../config/dbConfig.js';
+import { endPoint } from '../config/dbConfig.js';
 
 export const getScores = () => fetch(
-  dbApi,
+  endPoint,
 )
   .then((response) => response.json())
   .then((data) => data.result);
