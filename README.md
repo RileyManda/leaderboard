@@ -32,7 +32,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 </b>
-<hr><hr>
+<hr>
 <!-- PROJECT DESCRIPTION -->
 
 # <b>Leaderboard  📖</b><a name="about-project"></a>
