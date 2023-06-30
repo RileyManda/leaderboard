@@ -9,12 +9,11 @@ export const clearScoreTable = () => {
 };
 
 const refreshTable = () => {
-  getScores()
-    .then((data) => {
-      const scores = data.result;
-      clearScoreTable();
-      populateScoreTable(scores);
-    });
+  getScores().then((data) => {
+    const scores = data.result;
+    clearScoreTable();
+    populateScoreTable(scores);
+  });
 };
 
 export default refreshTable;

@@ -1,4 +1,4 @@
-import { dbApi } from './dbConfig.js';
+import { dbApi } from '../config/dbConfig.js';
 
 export const getScores = () => fetch(
   dbApi,
