@@ -1,7 +1,7 @@
 import './styles.css';
-import submitScore from './addScore.js';
-import populateScoreTable from './populateScoreTable.js';
-import refreshTable from './refresh.js';
+import submitScore from './modules/addScore.js';
+import populateScoreTable from './modules/populateScoreTable.js';
+import refreshTable from './modules/refresh.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   submitScore();
