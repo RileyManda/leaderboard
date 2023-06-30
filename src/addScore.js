@@ -1,3 +1,5 @@
+import { dbApi } from './dbConfig.js';
+
 const submitScore = () => {
   const scoreForm = document.getElementById('scoreForm');
   scoreForm.addEventListener('submit', (event) => {
@@ -22,7 +24,7 @@ const submitScore = () => {
     };
 
     fetch(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dumG1PB40BpIOBdmh4JI/scores',
+      dbApi,
       requestOptions,
     )
       .then((response) => response.json())

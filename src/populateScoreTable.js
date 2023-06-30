@@ -4,19 +4,22 @@ const populateScoreTable = () => {
   getScores().then((scores) => {
     const scoreTable = document.getElementById('score-table');
 
-    scores.forEach((score) => {
-      const row = document.createElement('tr');
-      const userCell = document.createElement('td');
-      const scoreCell = document.createElement('td');
+    if (Array.isArray(scores)) {
+      scores.forEach((score) => {
+        const row = document.createElement('tr');
+        const userCell = document.createElement('td');
+        const scoreCell = document.createElement('td');
 
-      userCell.textContent = score.user;
-      scoreCell.textContent = score.score;
+        userCell.textContent = score.user;
+        scoreCell.textContent = score.score;
 
-      row.appendChild(userCell);
-      row.appendChild(scoreCell);
+        row.appendChild(userCell);
+        row.appendChild(scoreCell);
 
-      scoreTable.appendChild(row);
-    });
+        scoreTable.appendChild(row);
+      });
+    }
   });
 };
+
 export default populateScoreTable;
